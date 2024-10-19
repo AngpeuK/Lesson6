@@ -29,3 +29,4 @@ test('check that consent is not approved  when user has not given consent', (): 
     //const processor = new Processor()
     expect(processor.verifyConsent(user)).toBeFalsy()
 })
+//done
