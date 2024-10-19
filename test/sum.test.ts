@@ -20,7 +20,7 @@ test('sums two positive numbers: passed', () => {
 test('sums two positive numbers: failing test', () => {
   // Don't use toBe with floating-point numbers
   // test will fail
-  expect(sum(0.1, 0.2)).toBe(0.3)
+  expect(sum(0.1, 0.3)).toBe(0.4)
 })
 
 test('sums two positive numbers with close to: default precision', () => {
@@ -31,4 +31,9 @@ test('sums two positive numbers with close to: default precision', () => {
 test('sums two positive numbers with close to: precision', () => {
   // this will fail: high precision
   expect(sum(0.1, 0.2)).toBeCloseTo(0.3, 20)
+})
+
+test('sums two positive numbers with close to: precision', () => {
+  // this will fail: high precision
+  expect(sum(1, -1)).toBeCloseTo(0, 20)
 })
